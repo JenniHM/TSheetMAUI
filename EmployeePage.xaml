@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TSheetMAUI.EmployeePage"
+             Padding="0,0,0,0">
+
+    <VerticalStackLayout>
+
+        <Frame BackgroundColor="BlanchedAlmond" Padding="24" CornerRadius="0">
+            <Label Text="Työnohjaus" HorizontalTextAlignment="Center" TextColor="Black" FontSize="28"/>
+        </Frame>
+
+        <Button x:Name="päivitysButton" Text="Päivitä listaus" FontSize="20" Clicked="päivitysButton_Clicked" Margin="10, 10"></Button>
+        
+        
+
+        <Label Text="Haku"
+               FontSize="20"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"/>
+
+        <SearchBar Placeholder="Hae etu- tai sukunimellä"
+                   SearchButtonPressed="OnSearchBarButtonPressed" />
+
+        <Label x:Name="emp_lataus" />
+
+        <ListView x:Name="employeeList" SelectionMode="Single" Margin="20, 0, 0, 20">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ContentView Padding="5">
+                            <Frame BorderColor="Silver" Padding="3">
+                                <StackLayout BackgroundColor="AliceBlue" Orientation="Horizontal" Padding="5, 0, 5, 0">
+
+                                    <Image Source="{Binding ImageLink}"
+                                     HorizontalOptions="Start"
+                                      WidthRequest="40"
+                                      HeightRequest="40"
+                                      VerticalOptions="StartAndExpand" />
+                                   
+
+                                    <Label Text="{Binding FirstName}"
+                                              HorizontalOptions="Center"
+                                               TextColor="Purple"
+                                               FontSize="20"
+                                               VerticalOptions="StartAndExpand"
+                                           Margin="5,0,5,0"/>
+                                    
+
+                                    <Label Text="{Binding LastName}"
+                                        HorizontalOptions="Start"
+                                         TextColor="Purple"
+                                           FontSize="20"
+                                           VerticalOptions="StartAndExpand" />
+
+                                </StackLayout>
+                            </Frame>
+                        </ContentView>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Button x:Name="navbutton" Text="Työtehtäviin" FontSize="20"  Margin="10, 10" Clicked="navbutton_Clicked"></Button>
+
+    </VerticalStackLayout>
+</ContentPage>

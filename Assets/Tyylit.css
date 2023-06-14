@@ -1,0 +1,28 @@
+﻿
+.startBtn{
+    padding: 20;
+    margin: 5 20 5 20;
+    background-color: forestgreen;
+    border-color: black;
+    font-size: 15;
+    color: black;
+}
+.stopBtn{
+    padding: 20;
+    margin: 5 20 5 20;
+    background-color: orangered;
+    border-color: black;
+    font-size: 15;
+    color: black;
+}
+.picBtn{
+    padding: 20;
+    margin: 5 20 5 20;
+    background-color: sandybrown;
+    border-color: black;
+    font-size: 15;
+    color: black;
+}
+.lista{
+    font-size: 12;
+}
