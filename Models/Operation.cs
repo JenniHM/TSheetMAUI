@@ -15,6 +15,6 @@ namespace TSheetMAUI.Models
         public string Comment { get; set; }
         public string Latitude { get; set; }
         public string Longitude { get; set; }
-       public Image Image { get; set; }
+       
     }
 }

@@ -18,5 +18,6 @@ namespace TSheetMAUI.Models
         public DateTime? DeletedAt { get; set; }
         public bool? Active { get; set; }
         public string ImageLink { get; set; }
+        
     }
 }

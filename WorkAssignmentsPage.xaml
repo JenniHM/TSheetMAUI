@@ -3,37 +3,37 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TSheetMAUI.WorkAssignmentsPage"
              Title="WorkAssignmentsPage">
+    
     <ContentPage.Resources>
         <StyleSheetExtension Source="/Assets/Tyylit.css"/>
     </ContentPage.Resources>
+    
     <ContentPage.Content>
-    <StackLayout>
-        <Frame BackgroundColor="BlanchedAlmond" Padding="24" CornerRadius="0">
-            <Label Text="Työnohjaus" HorizontalTextAlignment="Center" TextColor="Black" FontSize="28"/>
-        </Frame>
-        <Label Text="Valitse työtehtävä listalta" FontSize="20"></Label>
+        <StackLayout>
+            <Frame BackgroundColor="BlanchedAlmond" Padding="24" CornerRadius="0">
+                <Label Text="Työnohjaus" HorizontalTextAlignment="Center" TextColor="Black" FontSize="28"/>
+            </Frame>
+            <Label Text="Valitse työtehtävä listalta" FontSize="20"></Label>
             
-        <Label x:Name="wa_lataus" />
+            <Label x:Name="wa_lataus" />
 
-        <ListView x:Name="waList" StyleClass="lista" SelectionMode="Single">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <TextCell Text="{Binding Title}" Detail="{Binding Deadline}"/>
-
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+            <ListView x:Name="waList" StyleClass="lista" SelectionMode="Single">
+                <ListView.ItemTemplate>
+                    <DataTemplate>                       
+                        <TextCell Text="{Binding Title}" Detail="{Binding Deadline}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         
             <Label x:Name="lat_label"></Label>
         
             <Label x:Name="lon_label"></Label>
-        
-        <StackLayout Orientation="Horizontal">
-            <Button x:Name="Aloitus" Text="Aloita" StyleClass="startBtn" Clicked="Aloitus_Clicked"></Button>
-            <Button x:Name="Lopetus" Text="Lopeta" StyleClass="stopBtn" Clicked="Lopetus_Clicked"></Button>
-                <Button x:Name="Kuva" Text="Lisää kuva" StyleClass="picBtn" Clicked="Kuva_Clicked"></Button>
+
+            <StackLayout Orientation="Horizontal">
+                <Button x:Name="Aloitus" Text="Aloita" StyleClass="startBtn" Clicked="Aloitus_Clicked"></Button>
+                <Button x:Name="Lopetus" Text="Lopeta" StyleClass="stopBtn" Clicked="Lopetus_Clicked"></Button>
+            </StackLayout>
+           
         </StackLayout>
-       
-    </StackLayout>
     </ContentPage.Content>
 </ContentPage>

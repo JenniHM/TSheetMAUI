@@ -3,7 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TSheetMAUI.EmployeePage"
              Padding="0,0,0,0">
-
+    <ContentPage.Resources>
+        <StyleSheetExtension Source="/Assets/Tyylit.css"/>
+    </ContentPage.Resources>
+    
     <VerticalStackLayout>
 
         <Frame BackgroundColor="BlanchedAlmond" Padding="24" CornerRadius="0">
@@ -12,8 +15,6 @@
 
         <Button x:Name="päivitysButton" Text="Päivitä listaus" FontSize="20" Clicked="päivitysButton_Clicked" Margin="10, 10"></Button>
         
-        
-
         <Label Text="Haku"
                FontSize="20"
                FontAttributes="Bold"
@@ -33,26 +34,26 @@
                                 <StackLayout BackgroundColor="AliceBlue" Orientation="Horizontal" Padding="5, 0, 5, 0">
 
                                     <Image Source="{Binding ImageLink}"
-                                     HorizontalOptions="Start"
-                                      WidthRequest="40"
-                                      HeightRequest="40"
-                                      VerticalOptions="StartAndExpand" />
+                                            HorizontalOptions="Start"
+                                            WidthRequest="40"
+                                            HeightRequest="40"
+                                            VerticalOptions="StartAndExpand" />
                                    
 
                                     <Label Text="{Binding FirstName}"
-                                              HorizontalOptions="Center"
-                                               TextColor="Purple"
-                                               FontSize="20"
-                                               VerticalOptions="StartAndExpand"
-                                           Margin="5,0,5,0"/>
-                                    
+                                            HorizontalOptions="Center"
+                                            TextColor="Purple"
+                                            FontSize="20"
+                                            VerticalOptions="StartAndExpand"
+                                            Margin="5,0,5,0"/>
+
 
                                     <Label Text="{Binding LastName}"
-                                        HorizontalOptions="Start"
-                                         TextColor="Purple"
-                                           FontSize="20"
-                                           VerticalOptions="StartAndExpand" />
-
+                                            HorizontalOptions="Start"
+                                            TextColor="Purple"
+                                            FontSize="20"
+                                            VerticalOptions="StartAndExpand" />
+                                    
                                 </StackLayout>
                             </Frame>
                         </ContentView>
@@ -60,6 +61,10 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        <Label x:Name="tekijaLabel" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Center" />
+        
+        <Button x:Name="savebutton" Text="Muista valintani" StyleClass="noteBtn" Clicked="savebutton_Clicked"></Button>
+        <Button x:Name="delbutton" Text="Unohda valintani" StyleClass="noteBtn" IsVisible="false" Clicked="delbutton_Clicked"></Button>
 
         <Button x:Name="navbutton" Text="Työtehtäviin" FontSize="20"  Margin="10, 10" Clicked="navbutton_Clicked"></Button>
 

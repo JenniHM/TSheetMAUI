@@ -21,5 +21,6 @@ namespace TSheetMAUI.Models
         public DateTime? LastModifiedAt { get; set; }
         public DateTime? DeletedAt { get; set; }
         public bool Active { get; set; }
+        
     }
 }

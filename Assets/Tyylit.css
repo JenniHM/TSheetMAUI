@@ -15,13 +15,11 @@
     font-size: 15;
     color: black;
 }
-.picBtn{
-    padding: 20;
-    margin: 5 20 5 20;
-    background-color: sandybrown;
-    border-color: black;
-    font-size: 15;
+.noteBtn{
+    margin: 10 10;
+    background-color: aquamarine;
     color: black;
+    font-size: 18;
 }
 .lista{
     font-size: 12;
